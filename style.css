@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.parent {
+  border: 5px solid lime;
+  border-radius: 10px;
+  width: 400px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 600px;
+  background-image: url("cat.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.child {
+  width: 400px;
+  height: 290px;
+  padding: 10px;
+  background-color: deeppink;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: .3s;
+  transform-origin: left;
+  border: 5px double orange;
+}
+.child1 {
+  transform-origin: right;
+}
+.parent:hover .child {
+  transform: rotateY(-125deg);
+}
+.parent:hover .child1 {
+  transform: rotateY(125deg);
+}
